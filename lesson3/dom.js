@@ -117,16 +117,14 @@
 // console.log(allClass)
 
 // - отримати всі елементи з класом fc_rules!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-let allRules = document.getElementsByClassName("rules");
+// let allRules = document.getElementsByClassName("rules");
+// console.log(allRules)
+// // - поміняти колір тексту у всіх елементів fc_rules на червоний
+// for (let i = 0; i < allRules.length; i++) {
+//     allRules[i].style.color = "red";
+// }
 
 
-
-
-
-
-
-
-// - поміняти колір тексту у всіх елементів fc_rules на червоний
 
 
 //
@@ -140,11 +138,43 @@ let allRules = document.getElementsByClassName("rules");
 // Взяти файл template_2.html та працювати в ньому
 // - Напишіть код, який :
 // -- змінює колір тексту елемнту з ід main_header на будь-який інший
+let mainHeader = document.getElementById('main_header');
+mainHeader.style.color = 'red';
+
 // -- робить шириниу елементу ul 400 пікселів
+let ulTag = document.getElementsByTagName('ul');
+for (let i = 0; i < ulTag.length; i++) {
+    ulTag[i].style.width = '400px';
+    ulTag[i].style.backgroundColor = 'silver';
+}
+console.log(ulTag);
+
 // -- робить шириниу всіх елементів з класом linkList шириною 50%
+let linkL = document.getElementsByClassName('linkList');
+for (let i = 0; i < linkL.length; i++) {
+    linkL[i].style.width = '50%';
+    linkL[i].style.backgroundColor = 'yellow'
+}
 // -- отримує текст який зберігається в елементі з класом listElement2
+let listE2 = document.getElementsByClassName('listElement2');
+for (let i = 0; i < listE2.length; i++) {
+    console.log(listE2)
+}
+
 // -- отримує всі елементи li та змінює ім колір фону на сірий
+let allLi = document.getElementsByTagName('li');
+for (let i = 0; i < allLi.length; i++) {
+    allLi[i].style.backgroundColor = 'gray';
+}
+
 // -- отримує всі елементи 'a' та додає їм клас anchor
+let allA = document.getElementsByTagName('a');
+for (let i = 0; i < allA.length; i++) {
+    allA[i].style.backgroundColor = 'pink';
+
+}
+
+
 // -- отримує всі елементи 'a' та у випадку, якщо текстовий контен елементу дорівнює link3, змінює йому розмір тексту на 40 пікселів
 // -- отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
 // -- отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()
