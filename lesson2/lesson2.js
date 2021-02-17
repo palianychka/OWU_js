@@ -642,14 +642,14 @@
 
 // 4 створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо об'єкт є числом,
 // додати його в інший масив.
-let arrMix = ['kj', false, 'kjj', 2323, 'll', 45, true];
-let num = [];
-for (let i = 0; i < arrMix.length; i++) {
-if (typeof arrMix[i] === "number") {
-    num.push(arrMix[i])
-}
-}
-console.log(num)
+// let arrMix = ['kj', false, 'kjj', 2323, 'll', 45, true];
+// let num = [];
+// for (let i = 0; i < arrMix.length; i++) {
+// if (typeof arrMix[i] === "number") {
+//     num.push(arrMix[i])
+// }
+// }
+// console.log(num)
 
 //
 //
