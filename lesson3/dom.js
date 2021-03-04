@@ -125,8 +125,6 @@
 // }
 
 
-
-
 //
 // ====================
 // ====================
@@ -210,35 +208,504 @@
 // }
 
 // -- отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст елемнту = content 2 segment . Колір отримати з prompt()
-
+// let subHeader = document.getElementsByClassName('sub-header');
+// let fontColor = prompt('enter color; green, yellow, pink', 'silver')
+// for (let i = 0; i < fontColor.length; i++) {
+//     if (fontColor === 'green' ) {
+//         subHeader[i].style.color = 'green'
+//     } else
+//         if (fontColor === 'yellow') {
+//             subHeader[i].style.color = 'yellow'
+//         } else
+//             if (fontColor === 'pink') {
+//                 subHeader[i].style.color = 'pink'
+//             } else
+//                 if (fontColor === 'silver') {
+//                     subHeader[i].style.color = 'silver'
+//                 }
+// }
 
 // -- отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
+// let classContent = document.querySelectorAll('div.content_1');
+// let anotherText = prompt('enter your text');
+// for (let i = 0; i < classContent.length; i++) {
+//     classContent[i].innerText = anotherText
+// }
+
+
 // -- отримати елементи p та змінити їм paddin на довільне значення
+// let pElement = document.querySelectorAll('p');
+// for (let i = 0; i < pElement.length; i++) {
+//     const pElementElement = pElement[i];
+//     pElementElement.style.padding = '30px'
+// }
+
+
 // -- отримати елементи з класом text2 та змінити їм текст на довільне значення
+// let elementText2 = document.querySelectorAll('p.text2');
+// for (let i = 0; i < elementText2.length; i++) {
+//     const elementText2Element = elementText2[i];
+//     elementText2Element.innerText = 'я вісьолий апільсін'
+// }
 
 
-// - создать 5 объектов. В каждом объекте не менее 3х полей. Все объекты разные по набору полей. (Т.е поле name  должно присутствовать только 1 раз в одном объекте )
-// - создать 5 объектов с полностью разным набором полей. В каждом объекте должен присутсвовать массив и внутренний объект. Опишите что угодно, машину, картину, болт... Пример : let man = { name: 'kokos', skills : ['java','js'] , wife: { name: 'cherry' } };
-// - При помощи for in вывести все ключи всех объектов из задания 1 и 2
-// - При помощи Object.keys вывести все ключи всех объектов из задания 1 и 2
-// - Создать массив из 10 объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет. (Значаения полей могу быть выдуманными)
-// - Создать массив объектов cities и заполнить его объектами с полями название, популяция, страна, регион. (Значаения полей могу быть выдуманными)
-// - Создать массив объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет, водитель. Водитель является отдельным объектом с полями имя, возраст, пол, стаж.
+// // - создать 5 объектов. В каждом объекте не менее 3х полей. Все объекты разные по набору полей. (Т.е поле name  должно присутствовать только 1 раз в одном объекте )
+// // - создать 5 объектов с полностью разным набором полей. В каждом объекте должен присутсвовать массив и внутренний объект.
+// // Опишите что угодно, машину, картину, болт... Пример : let man = { name: 'kokos', skills : ['java','js'] , wife: { name: 'cherry' } };
+// let man = {name: 'kokos', skills: ['java', 'js'], wife: {name: 'cherry'}};
+// let car = {
+//     model: 'bmw',
+//     color: ['red', 'black'],
+//     speed: {
+//         min: 40,
+//         max: 300
+//     }
+// };
+// let zodiac = {
+//     quantity: 12,
+//     list: ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra',
+//         'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'],
+//     Aquarius: {
+//         begin: '21 January',
+//         end: '19 February'
+//     }
+// }
+//
+//
+// // - При помощи for in вывести все ключи всех объектов из задания 1 и 2
+// for (let key in man) {
+//     console.log(key)
+// }
+//
+// console.log('--------------------');
+//
+// for (let key in car) {
+//     console.log(key);
+// }
+//
+// console.log('-------------------');
+//
+// for (let key in zodiac) {
+//     console.log(key);
+// }
+//
+//
+// // - При помощи Object.keys вывести все ключи всех объектов из задания 1 и 2
+// console.log(Object.keys(man), Object.keys(car), Object.keys(zodiac));
+
+// // - Создать массив из 10 объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет. (Значаения полей могу быть выдуманными)
+// let cars = [
+//     {
+//         car01: {
+//             model: 'audi',
+//             year: 2000,
+//             power: 150,
+//             color: 'red'
+//         }
+//     },
+//     {
+//         car02: {
+//             model: 'fiat',
+//             year: 2007,
+//             power: 100,
+//             color: 'yellow'
+//         }
+//     },
+//     {
+//         car03: {
+//             model: 'bentley',
+//             year: 2003,
+//             power: 130,
+//             color: 'green'
+//         }
+//     },
+//     {
+//         car04: {
+//             model: 'bugatti',
+//             year: 2019,
+//             power: 250,
+//             color: 'darkblue'
+//         }
+//     },
+//     {
+//         car05: {
+//             model: "chery",
+//             year: 2015,
+//             power: 110,
+//             color: 'silver'
+//         }
+//     },
+//     {
+//         car06: {
+//             model: 'chevrolet',
+//             year: 2009,
+//             power: 189,
+//             color: 'pink'
+//         }
+//     },
+//     {
+//         car07: {
+//             model: 'citroen',
+//             year: 2011,
+//             power: 111,
+//             color: 'blue'
+//         }
+//     },
+//     {
+//         car08: {
+//             model: 'daewoo',
+//             year: 2002,
+//             power: 99,
+//             color: 'violet'
+//         }
+//     },
+//     {
+//         car09: {
+//             model: 'datsun',
+//             year: 2020,
+//             power: 199,
+//             color: 'red'
+//         }
+//     },
+//     {
+//         car10: {
+//             model: 'ford',
+//             year: 2017,
+//             power: 189,
+//             color: 'black'
+//         }
+//     }
+// ]
+
+// // - Создать массив объектов cities и заполнить его объектами с полями название, популяция, страна, регион. (Значаения полей могу быть выдуманными)
+// let cities = [
+//     {
+//         citi01: {
+//             name: 'Lviv',
+//             population: 600000,
+//             country: 'Ukraine',
+//             region: 'Europe'
+//         }
+//     },
+//     {
+//         citi02: {
+//             name: 'Toronto',
+//             population: 800000,
+//             country: 'Canada',
+//             region: 'North America'
+//         }
+//     },
+//     {
+//         citi03: {
+//             name: 'Tokyo',
+//             population: 100000,
+//             country: 'Japan',
+//             region: 'Asia'
+//         }
+//     },
+//     {
+//         citi04: {
+//             name: 'Sydney',
+//             population: 120000,
+//             country: 'Australia',
+//             region: 'Australia'
+//         }
+//     },
+//     {
+//         citi05: {
+//             name: 'Lima',
+//             population: 900000,
+//             country: 'Peru',
+//             region: 'South America'
+//         }
+//     }
+// ]
+// // console.log(cars);
+// // console.log(cities)
+
+
+// // - Создать массив объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет, водитель. Водитель является отдельным объектом с полями имя, возраст, пол, стаж.
+// let carsWithDrivers = [
+//     {
+//         car1: {
+//             model: 'foton',
+//             year: 2016,
+//             power: 100,
+//             color: 'red',
+//             driver: {
+//                 name: 'Vasia',
+//                 age: 20,
+//                 sex: 'male',
+//                 experience: 2
+//             }
+//         }
+//     },
+//     {
+//         car2: {
+//             model: 'GAC',
+//             year: 2017,
+//             power: 110,
+//             color: 'orange',
+//             driver: {
+//                 name: 'Ruslan',
+//                 age: 25,
+//                 sex: 'male',
+//                 experience: 5
+//             }
+//         }
+//     },
+//     {
+//         car3: {
+//             model: 'GAZ',
+//             year: 2018,
+//             power: 130,
+//             color: 'yellow',
+//             driver: {
+//                 name: 'Olia',
+//                 age: 23,
+//                 sex: 'female',
+//                 experience: 4
+//             }
+//         }
+//     },
+//     {
+//         car4: {
+//             model: 'google',
+//             year: 2020,
+//             power: 140,
+//             color: 'green',
+//             driver: {
+//                 name: 'Liena',
+//                 age: 23,
+//                 sex: 'male',
+//                 experience: 1
+//             }
+//         }
+//     },
+//     {
+//         car5: {
+//             model: 'tesla',
+//             year: 2019,
+//             power: 150,
+//             color: 'blue',
+//             driver: {
+//                 name: 'Dima',
+//                 age: 29,
+//                 sex: 'female',
+//                 experience: 11
+//             }
+//         }
+//     }
+// ]
+// // console.log(carsWithDrivers);
+
+
 // - проитерировать каждый массив из задания 5,6,7 при помощи while.
+
+// console.log('-----------------------')
+// console.log('cars')
+// let i = 0;
+// while (i < cars.length) {
+//     console.log(cars[i]);
+//     i++
+// }
+
+// console.log('-----------------------')
+// console.log('cities')
+// let i = 0;
+// while (i < cities.length) {
+//     console.log(cities[i]);
+//     i++
+// }
+//
+// console.log('-----------------------')
+// console.log('carsWithDrivers');
+// let i = 0;
+// while (i < carsWithDrivers.length) {
+//     console.log(carsWithDrivers[i]);
+//     i++
+// }
+
+
 // - проитерировать каждый массив из задания 5,6,7 при помощи for .
+// console.log('-----------------------')
+// console.log('cars')
+// for (let i = 0; i < cars.length; i++) {
+//     const onlyCars = cars[i];
+//     console.log(onlyCars)
+// }
+//
+//
+// console.log('-----------------------')
+// console.log('cities')
+// for (let i = 0; i < cities.length; i++) {
+//     const citi = cities[i];
+//     console.log(citi)
+// }
+//
+//
+// console.log('-----------------------')
+// console.log('carsWithDrivers');
+// for (let i = 0; i < carsWithDrivers.length; i++) {
+//     const carsWithDriver = carsWithDrivers[i];
+//     console.log(carsWithDriver)
+//
+// }
+
+
 // - проитерировать каждый массив из задания 5,6,7 при помощи  for of.
-//                                                                 - взять объекты из задания 1 и превратить каждый в json.
-// - взять json из задания 11 и превратить их обратно в объекты.
-// - взять массив из задания 5,в цикле перебрать его объекты превратив их в json .
-// - взять массив из задания 6,в цикле перебрать его объекты превратив их в json .
-// - взять массив из задания 7,в цикле перебрать его объекты превратив их в json и сразу скоприовать в новый массив.
-// - Создать массив пользователей. У каждого пользователя обязательно должено быть поле skills которое является массивом. Проитерировать массив пользователей и в каждом пользователе проитерировать его массив skills
-// - Создать массив пользователей. У каждого пользователя обязательно должено быть поле skills которое является массивом. Проитерировать массив пользователей и в каждом пользователе проитерировать его массив skills. Скопировать все skills всех пользователей в отедльный массив
+// console.log('-----------------------')
+// console.log('cars')
+// for (const car of cars) {
+//     console.log(car)
+// }
 //
+// console.log('-----------------------')
+// console.log('cities')
+// for (const city of cities) {
+//     console.log(city)
+// }
+//
+//
+// console.log('-----------------------')
+// console.log('carsWithDrivers');
+// for (const carsWithDriver of carsWithDrivers) {
+//     console.log(carsWithDriver)
+// }
+
+
+// // - взять объекты из задания 1 и превратить каждый в json.
+// let jsonCars = JSON.stringify(cars);
+// console.log(jsonCars)
+//
+// // - взять json из задания 11 и превратить их обратно в объекты.
+// let parsedCars = JSON.parse(jsonCars);
+// console.log(parsedCars)
+//
+// // - взять массив из задания 5,в цикле перебрать его объекты превратив их в json .
+// for (let i = 0; i < parsedCars.length; i++) {
+//     const parsedCar = parsedCars[i];
+//     let jsonCarInLoop = JSON.stringify(parsedCar);
+//     console.log(jsonCarInLoop)
+// }
+//
+// // - взять массив из задания 7,в цикле перебрать его объекты превратив их в json и сразу скоприовать в новый массив.
+// console.log('----------------------------');
+// let newArray = [];
+// // console.log(carsWithDrivers);
+// for (let i = 0; i < carsWithDrivers.length; i++) {
+//     const carsWithDriversI = carsWithDrivers[i];
+//     let jsonCarsWithDrivers = JSON.stringify(carsWithDriversI);
+//     // console.log(jsonCarsWithDrivers);
+//     newArray.push(jsonCarsWithDrivers);
+// }
+// console.log(newArray)
+
+
+// - Создать массив пользователей. У каждого пользователя обязательно должено быть поле skills которое является массивом.
+// Проитерировать массив пользователей и в каждом пользователе проитерировать его массив skills
+// let users = [
+//     {
+//             name: 'Alex',
+//             englishSkills: {
+//                 reading: true,
+//                 writing: false,
+//                 speaking: true
+//         }
+//     },
+//         {
+//             name: 'Olia',
+//             englishSkills: {
+//                 reading: true,
+//                 writing: true,
+//                 speaking: true
+//         }
+//     },
+//         {
+//             name: 'Dima',
+//             englishSkills: {
+//                 reading: false,
+//                 writing: false,
+//                 speaking: false
+//         }
+//     },
+//         {
+//             name: 'Svitlana',
+//             englishSkills: {
+//                 reading: false,
+//                 writing: false,
+//                 speaking: true
+//         }
+//     },
+//         {
+//             name: 'Katia',
+//             englishSkills: {
+//                 reading: false,
+//                 writing: false,
+//                 speaking: false
+//         }
+//     },
+// ]
+// for (let i = 0; i < users.length; i++) {
+//     const user = users[i];
+//     console.log(user);
+//     console.log(user.englishSkills);
+// }
+
+
+// - Создать массив пользователей. У каждого пользователя обязательно должено быть поле skills которое является массивом.
+// Проитерировать массив пользователей и в каждом пользователе проитерировать его массив skills. Скопировать все skills
+// всех пользователей в отедльный массив
+
+// let emptyArr = [];
+// let usersArr = [
+//     {
+//         name: 'Alex',
+//         skills: ['js', 'angular', 'node js', 'sql']
+//     },
+//     {
+//         name: 'Olia',
+//         skills: ['english', 'polish', 'ukrainian']
+//     },
+//     {
+//         name: 'Dima',
+//         skills: ['driving', 'swimming', 'flay']
+//     },
+//     {
+//         name: 'Svitlana',
+//         skills: ['communication', 'psychology', 'management']
+//     },
+//     {
+//         name: 'Katia',
+//         skills: ['work with wood', 'work with metal']
+//     },
+// ]
+//
+//
+// for (let i = 0; i < usersArr.length; i++) {
+//     const usersArrElement = usersArr[i];
+//     console.log(usersArrElement);
+//     console.log(usersArrElement.skills);
+//     emptyArr.push(usersArrElement.skills);
+// }
+// console.log(emptyArr)
+
+
 // - За допомогою 2х циклів циклів проітеррувати  даний масив і масив кожного об'єкта.
-// let users = [{name: 'vasya', age: 31, status: false, skills: ['java', 'js']}, {name: 'petya', age: 30, status: true, skills: ['java', 'js', 'html']}, {name: 'kolya', age: 29, status: true, skills: ['mysql', ',mongo']}, {name: 'olya', age: 28, status: false, skills: ['java', 'js']}, {name: 'max', age: 30, status: true, skills: ['mysql', ',mongo']}];
-//
-//
+let users = [
+    {name: 'vasya', age: 31, status: false, skills: ['java', 'js']},
+    {name: 'petya', age: 30, status: true, skills: ['java', 'js', 'html']},
+    {name: 'kolya', age: 29, status: true, skills: ['mysql', ',mongo']},
+    {name: 'olya', age: 28, status: false, skills: ['java', 'js']},
+    {name: 'max', age: 30, status: true, skills: ['mysql', ',mongo']}
+    ];
+
+
+
+
+
+
+
 //
 // - З масиву users за допомогою циклу витягнути адреси користувачів і записати (скопіювати) їх в інший порожній масив.
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement. Всі данні в одному блоці.
