@@ -691,26 +691,32 @@
 // console.log(emptyArr)
 
 
-// - За допомогою 2х циклів циклів проітеррувати  даний масив і масив кожного об'єкта.
-let users = [
-    {name: 'vasya', age: 31, status: false, skills: ['java', 'js']},
-    {name: 'petya', age: 30, status: true, skills: ['java', 'js', 'html']},
-    {name: 'kolya', age: 29, status: true, skills: ['mysql', ',mongo']},
-    {name: 'olya', age: 28, status: false, skills: ['java', 'js']},
-    {name: 'max', age: 30, status: true, skills: ['mysql', ',mongo']}
-    ];
-
-
-
-
-
+// // - За допомогою 2х циклів циклів проітеррувати  даний масив і масив кожного об'єкта.
+// let users = [
+//     {name: 'vasya', age: 31, status: false, skills: ['java', 'js']},
+//     {name: 'petya', age: 30, status: true, skills: ['java', 'js', 'html']},
+//     {name: 'kolya', age: 29, status: true, skills: ['mysql', ',mongo']},
+//     {name: 'olya', age: 28, status: false, skills: ['java', 'js']},
+//     {name: 'max', age: 30, status: true, skills: ['mysql', ',mongo']}
+//     ];
+//
+// // for (const user of users) {
+// //     console.log(user);
+// //     console.log(user.skills);
+// //     console.log('_______________________________')
+// // }
+//
+// let i = 0;
+// while (i < users.length) {
+//     let user = users[i];
+//     console.log(user);
+//     console.log(user.skills);
+//     console.log('-----------------------------------');
+//     i++
+// }
 
 
 //
-// - З масиву users за допомогою циклу витягнути адреси користувачів і записати (скопіювати) їх в інший порожній масив.
-// - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement. Всі данні в одному блоці.
-// - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement, розділивши всі властивості по своїм блокам (div>div*4)
-// - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement, розділивши всі властивості по своїм блокам , блок з адресою зробити окремим блоком, з блоками для кожної властивості
 //
 // let users = [{
 //     name: 'vasya',
@@ -768,25 +774,162 @@ let users = [
 //     status: true,
 //     address: {city: 'Cairo', country: 'Egypt', street: 'Seashore', houseNumber: 45}
 // }];
+// - З масиву users за допомогою циклу витягнути адреси користувачів і записати (скопіювати) їх в інший порожній масив.
+// let userAddress = [];
+// for (const user of users) {
+//     userAddress.push(user.address)
+// }
+// console.log(userAddress)
+
+
+// - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement.
+// Всі данні в одному блоці.
+// let gren = Math.random() * 255;
+// let reed = Math.random() * 255;
+// let blue = Math.random() * 255;
+//
+// for (const user of users) {
+//     let divElement = document.createElement('div');
+//     document.body.appendChild(divElement);
+//     divElement.style.backgroundColor = `rgb(${gren}, ${reed}, ${blue})`;
+//     divElement.style.width = '50%';
+//     divElement.style.height = '100px';
+//     divElement.style.border = '2px solid black'
+//     divElement.innerHTML = user.name + '<br>' + user.age + '<br>' + user.status + '<br>' + user.address.country + ', '
+//         + user.address.city + ', ' + user.address.street + ', ' + user.address.houseNumber;
+//
+// }
+
+
+// - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement,
+// розділивши всі властивості по своїм блокам (div>div*4)
+//
+
+// let container = document.querySelector('.container');
+//
+// for (const user of users) {
+//     const userContainer = document.createElement('div')
+//
+//     const userName = document.createElement('div');
+//     userName.style.backgroundColor = 'silver';
+//     userName.style.width = '100%';
+//     userName.style.height = '15px';
+//     userName.innerText = user.name;
+//     userContainer.append(userName);
+//
+//     const userAge = document.createElement('div');
+//     userAge.style.backgroundColor = 'red';
+//     userAge.style.width = '100%';
+//     userAge.style.height = '15px';
+//     userAge.innerText = user.age;
+//     userContainer.append(userAge);
+//
+//     const userStatus = document.createElement('div');
+//     userStatus.style.backgroundColor = 'yellow';
+//     userStatus.style.width = '100%';
+//     userStatus.style.height = '15px';
+//     userStatus.innerText = user.status;
+//     userContainer.append(userStatus);
+//
+//     const userAddress = document.createElement('div');
 //
 //
-// - Дано 2 масиви з рівною кількістю об'єктів.
-// Масиви:
-//     let usersWithId = [{id: 1, name: 'vasya', age: 31, status: false}, {id: 2, name: 'petya', age: 30, status: true}, {id: 3, name: 'kolya', age: 29, status: true}, {id: 4, name: 'olya', age: 28, status: false},];
-// let citiesWithId = [{user_id: 3, country: 'USA', city: 'Portland'}, {user_id: 1, country: 'Ukraine', city: 'Ternopil'}, {user_id: 2, country: 'Poland', city: 'Krakow'}, {user_id: 4, country: 'USA', city: 'Miami'},];
-// З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
-//     Записати цей об'єкт в новий масив
-// Частковий приклад реультату:
-//     let usersWithCities = [{id: 1, name: 'vasya', age: 31, status: false, address: {user_id: 1, country: 'Ukraine', city: 'Ternopil'}}....]
+//     for (key in user.address) {
+//         const valuesContainer = document.createElement('div');
+//         valuesContainer.style.backgroundColor = 'pink';
+//         valuesContainer.style.width = '100%';
+//         valuesContainer.style.height = '15px';
+//         valuesContainer.innerText = user.address[key];
+//         userAddress.append(valuesContainer)
+//     }
+//     userContainer.append(userAddress);
+//     userContainer.style.border = '5px solid black'
+//     container.append(userContainer)
+// }
+
+
 //
 //
+// // - Дано 2 масиви з рівною кількістю об'єктів.
+// // Масиви:
+// let usersWithId = [
+//     {id: 1, name: 'vasya', age: 31, status: false},
+//     {id: 2, name: 'petya', age: 30, status: true},
+//     {id: 3, name: 'kolya', age: 29, status: true},
+//     {id: 4, name: 'olya', age: 28, status: false}
+// ];
 //
 //
+// let citiesWithId = [
+//     {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+//     {user_id: 2, country: 'Poland', city: 'Krakow'},
+//     {user_id: 3, country: 'USA', city: 'Portland'},
+//     {user_id: 4, country: 'USA', city: 'Miami'}
+// ];
 //
-// - створити розмітці блок з id, class та текстом в середені. Зчитати окремо цей текст з селекторів по id , class та тегу
-// - змінити цей текст використовуючи селектори id, class,  tag
-// - змінити висоту та ширину блоку використовуючи селектори id, class,  tag
+//
+// for (let i = 0; i < usersWithId.length; i++) {
+//     const usersWithIdElement = usersWithId[i];
+//     for (let i = 0; i < citiesWithId.length; i++) {
+//         const citiesWithIdElement = citiesWithId[i];
+//         usersWithIdElement.address = citiesWithIdElement;
+//     }
+//     ;
+// }
+// ;
+//
+// console.log(usersWithId);
+//
+//
+// // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+// //     Записати цей об'єкт в новий масив
+// // Частковий приклад реультату:
+// //     let usersWithCities = [{id: 1, name: 'vasya', age: 31, status: false, address: {user_id: 1, country: 'Ukraine', city: 'Ternopil'}}....]
+
+
+//
+//
+// // - створити розмітці блок з id, class та текстом в середені. Зчитати окремо цей текст з селекторів по id , class та тегу
+//
+// let getDivEl = document.body.querySelector('div');
+// console.log(getDivEl);
+//
+// let getIdEl = document.body.querySelector('#sound_1');
+// console.log(getIdEl);
+//
+// let getClassEl = document.body.querySelector('.skriabin_sounds');
+// console.log(getClassEl);
+//
+//
+// // - змінити цей текст використовуючи селектори id, class,  tag
+// getIdEl.innerHTML = 'visiolyi apielsin';
+//
+// getClassEl.innerHTML = 'ababagalamaga';
+//
+// getDivEl.innerText = 'plachiet apilsin';
+//
+//
+// // -!!!!!!!!-ID нє работаєт змінити висоту та ширину блоку використовуючи селектори id, class,  tag
+// getDivEl.style.height = '100px';
+// getDivEl.style.width = '300px';
+// getDivEl.style.backgroundColor = 'pink';
+//
+// getClassEl.style.height = '200px';
+// getClassEl.style.width = '600px';
+// getClassEl.style.backgroundColor = 'red';
+//
+// getIdEl.style.height = '300px';
+// getIdEl.style.width = '900px';
+// getIdEl.style.backgroundColor = 'yellow';!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
 // - за допомоги document.createElement та appendChild створити таблицю на 1 рядок з трьома ячейками всередені
+let tableEl = document.createElement('table');
+let tBody =
+
+
+
 // - за допомоги document.createElement, appendChild та циклу створити таблицю на 10 рядків з трьома ячейками всередені
 // - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на 10 рядків з 5 ячейками всередені
 // - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на n рядків з m ячейками всередені. n та m отримати з prompt
