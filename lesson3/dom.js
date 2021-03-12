@@ -974,27 +974,72 @@
 
 
 // - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на n рядків з m ячейками всередені. n та m отримати з prompt
+// let table = document.createElement('table');
+// table.style.border = '1px solid black';
+// let rowEll = prompt('enter number for row');
+// let cellEll = prompt('enter number for cell');
+// for (let i = 0; i < rowEll; i++) {
+//     const row = table.insertRow(0);
+//     for (let j = 0; j < cellEll; j++) {
+//         const cell = row.insertCell(0);
+//         cell.style.border = '1px solid black';
+//         cell.innerText = 'table';
+//     }
+// }
+// document.body.appendChild(table)
 
 
 
-//
+
+
+
+
 // --Завантажити з мережі будь-який шаблон сайту. Підключити до нього свій скріпт-файл. У файлі прописати наступні доступи та дії
 // - знайти всі елементі, які мають class
+// let classEll = document.querySelectorAll('.class');
+
+
 // - знайти всі параграфи ,та змінити текст на hello oktenweb!
+// let allP = document.getElementsByTagName('p');
+
+
+// let allP = document.querySelectorAll('p');
+
 //     - знайти всі div та змінити ім колір на червоний
 //
+
+
+
+
+
+
+
 // ============
 // ====class===
 //     ============
 //
-//     - є сторінка rules.html. Контентом сторінки є заголовки та параграфи. Заголовки (h2) характеризують тему контенту яка вказана в параграфі.
+//     -!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! є сторінка rules.html. Контентом сторінки є заголовки та параграфи. Заголовки (h2) характеризують тему контенту яка вказана в параграфі.
 //     створити скрипт, котрий зчитує всі заголовки, та робить в блоці з id=content з них список(ul>li), який буде змістом того, що знаходиться на сторінці.
 //     Скріпт повинен працювати навіть якщо кількість блоків з заголовком та параграфом зміниться.
 //
+let rules = document.querySelectorAll('h2')
+let ul = document.createElement('ul');
+for (let i = 0; i < rules.length; i++) {
+    const liElement = rules[i];
+    const li = document.createElement('li');
+    li.innerText = liElement;
+    ul.appendChild(li);
+}
+document.body.appendChild(ul)
+
+
+
 // -Є масив котрий характеризує правила. Створити скрипт який ітерує цей масив, та робить з кожне правило в окремому блоці.
 //     При цому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
 //     Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
 //
+
+
 // let rules = [
 //     {
 //         title: 'Первое правило Бойцовского клуба.',
