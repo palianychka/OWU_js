@@ -923,16 +923,60 @@
 // getIdEl.style.backgroundColor = 'yellow';!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-
 // - за допомоги document.createElement та appendChild створити таблицю на 1 рядок з трьома ячейками всередені
-let tableEl = document.createElement('table');
-let tBody =
-
+// let tableEl = document.createElement('table');
+// let row = tableEl.insertRow(0)
+// let cell1 = row.insertCell(0);
+// let cell2 = row.insertCell(1);
+// let cell3 = row.insertCell(2);
+// cell1.innerHTML = "NEW CELL1";
+// cell2.innerHTML = "NEW CELL2";
+// cell3.innerHTML = "NEW CELL3";
+// tableEl.style.border = '1px solid black';
+// cell1.style.border = '1px solid black';
+// cell2.style.border = '1px solid black';
+// cell3.style.border = '1px solid black';
+// document.body.appendChild(tableEl)
 
 
 // - за допомоги document.createElement, appendChild та циклу створити таблицю на 10 рядків з трьома ячейками всередені
+// let tableWisTenRow = document.createElement('table');
+// tableWisTenRow.style.border = '1px solid black';
+// for (let i = 0; i < 10; i++) {
+//     const row = tableWisTenRow.insertRow(0);
+//     for (let j = 0; j < 3; j++) {
+//         const cell = row.insertCell(0);
+//         cell.innerText = 'тут може бути ваша реклама';
+//         cell.style.border = '1px solid black'
+//     }
+// }
+// document.body.appendChild(tableWisTenRow)
+
+
 // - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на 10 рядків з 5 ячейками всередені
+// let table = document.createElement('table');
+// table.style.border = '1px solid black';
+// for (let i = 0; i < 10; i++) {
+//     const tableElement = table[i];
+//     const row = table.insertRow(0);
+//     for (let j = 0; j < 5; j++) {
+//         const rowElement = row[j];
+//         const cell = row.insertCell(0);
+//         cell.style.border = '1px solid black';
+//         cell.innerText = 'кольори';
+//         const red = Math.random() * 255;
+//         const green = Math.random() * 255;
+//         const blue = Math.random() * 255;
+//         cell.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
+//     }
+// }
+// document.body.appendChild(table)
+
+
 // - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на n рядків з m ячейками всередені. n та m отримати з prompt
+
+
+
 //
 // --Завантажити з мережі будь-який шаблон сайту. Підключити до нього свій скріпт-файл. У файлі прописати наступні доступи та дії
 // - знайти всі елементі, які мають class
