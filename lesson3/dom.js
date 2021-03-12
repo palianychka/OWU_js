@@ -920,7 +920,7 @@
 //
 // getIdEl.style.height = '300px';
 // getIdEl.style.width = '900px';
-// getIdEl.style.backgroundColor = 'yellow';!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// getIdEl.style.backgroundColor = 'yellow';
 
 
 // - за допомоги document.createElement та appendChild створити таблицю на 1 рядок з трьома ячейками всередені
@@ -996,17 +996,30 @@
 
 // --Завантажити з мережі будь-який шаблон сайту. Підключити до нього свій скріпт-файл. У файлі прописати наступні доступи та дії
 // - знайти всі елементі, які мають class
-// let classEll = document.querySelectorAll('.class');
+// let classEll = document.querySelectorAll('class');
+// for (const classEllElement of classEll) {
+//     classEllElement.innerText = 'iiiiiiiiiiiiiiiii'
+// }
 
 
-// - знайти всі параграфи ,та змінити текст на hello oktenweb!
-// let allP = document.getElementsByTagName('p');
-
-
-// let allP = document.querySelectorAll('p');
+// // - знайти всі параграфи ,та змінити текст на hello oktenweb!
+// // let allP = document.getElementsByTagName('p');
+// let p = document.querySelectorAll('p');
+// console.log(p);
+// // p.forEach(el => {
+// //     el.innerText = 'Hello okten';
+// // })
+//
+// for (const item of p) {
+//     item.innerText = 'asxnav'
+// }
 
 //     - знайти всі div та змінити ім колір на червоний
-//
+// let divEll = document.querySelectorAll('div');
+// for (const divEllElement of divEll) {
+//     divEllElement.style.backgroundColor = 'red';
+//     divEllElement.style.border = '1px solid black'
+// }
 
 
 
@@ -1022,15 +1035,15 @@
 //     створити скрипт, котрий зчитує всі заголовки, та робить в блоці з id=content з них список(ul>li), який буде змістом того, що знаходиться на сторінці.
 //     Скріпт повинен працювати навіть якщо кількість блоків з заголовком та параграфом зміниться.
 //
-let rules = document.querySelectorAll('h2')
-let ul = document.createElement('ul');
-for (let i = 0; i < rules.length; i++) {
-    const liElement = rules[i];
-    const li = document.createElement('li');
-    li.innerText = liElement;
-    ul.appendChild(li);
-}
-document.body.appendChild(ul)
+// let rules = document.querySelectorAll('h2')
+// let ul = document.createElement('ul');
+// for (let i = 0; i < rules.length; i++) {
+//     const liElement = rules[i];
+//     const li = document.createElement('li');
+//     li.innerText = liElement.innerText;
+//     ul.appendChild(li);
+// }
+// document.body.appendChild(ul)
 
 
 
@@ -1038,7 +1051,6 @@ document.body.appendChild(ul)
 //     При цому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
 //     Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
 //
-
 
 // let rules = [
 //     {
@@ -1075,11 +1087,36 @@ document.body.appendChild(ul)
 //     },
 //
 // ];
+
+// console.log(rules);
+// let wrap = document.createElement('div')
+// for (let i = 0; i < rules.length; i++) {
+//     const rule = rules[i];
+//     const ruleContainer = document.createElement('div');
 //
+//     const titleContainer = document.createElement('div');
+//     titleContainer.textContent = rule.title;
+//     ruleContainer.append(titleContainer);
 //
+//     const bodyContainer = document.createElement('div');
+//     bodyContainer.textContent = rule.body;
+//     ruleContainer.append(rule.body);
 //
+//     wrap.append(ruleContainer);
+// }
+// document.body.append(wrap);
+
+
 //
-// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі users. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт в свій блок (блок в блоці).
-// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі posts. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
-// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі comments. За допомогою document.createElement вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
-// ****** при помощи fetch (как в примере) получить от jsonplaceholder все posts. Внутри последнего then() сделать еще один fetch который сделает запрос и получит все comments. Объеденить соответсвующий post с соответсвующими comment и вывести в браузер. Подсказка : в каждом comment есть поле postId которое определяет какой комментарий принадлежит какому посту
+// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі users. За допомогою document.createElement
+// вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт в свій блок (блок в блоці).
+
+// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі posts. За допомогою document.createElement
+// вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
+
+// *** за допомогою fetch (як в прикладі) отримати від jsonplaceholder всі comments. За допомогою document.createElement
+// вивести їх в браузер. Помістити кожен окремий об'єкт в блок, при цьому кожен внутрішній об'єкт(якщо він існує) в свій блок (блок в блоці).
+
+// ****** при помощи fetch (как в примере) получить от jsonplaceholder все posts. Внутри последнего then() сделать еще
+// один fetch который сделает запрос и получит все comments. Объеденить соответсвующий post с соответсвующими comment и
+// вывести в браузер. Подсказка : в каждом comment есть поле postId которое определяет какой комментарий принадлежит какому посту
